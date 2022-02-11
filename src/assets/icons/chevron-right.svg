@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="15px" viewBox="0 0 7 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>827DDA71-EC0B-41EC-B3CE-F8CC4525D385</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="BPOP---HU---Administrar-perfiles-[Web-1280]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="chevron-down" transform="translate(-128.000000, -595.000000)" filter="url(#filter-1)">
+            <g transform="translate(131.500000, 602.500000) rotate(270.000000) translate(-131.500000, -602.500000) translate(124.500000, 599.000000)">
+                <path d="M12.5555449,0.210665866 C12.9224542,-0.103827811 13.4748404,-0.0613365594 13.7893341,0.305572701 C14.1038278,0.672481944 14.0613365,1.22486819 13.6944273,1.5393619 L7.56944118,6.78935 C7.24176335,7.07021667 6.75823664,7.07021667 6.43055881,6.78935 L0.305572717,1.5393619 C-0.061336561,1.22486819 -0.103827812,0.672481944 0.210665865,0.305572701 C0.525159524,-0.0613365594 1.07754577,-0.103827811 1.44445505,0.210665866 L7,4.97256152 L12.5555449,0.210665866 Z" id="Path" fill="#000000" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

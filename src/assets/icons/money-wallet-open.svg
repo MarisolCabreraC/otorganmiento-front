@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>F519D4CB-CABB-4BFD-97D3-9BE3A5392F32</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.000000 0 0 0 0 0.521569 0 0 0 0 0.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="BPOP---HU---Consultar-usuario-[Web-1280]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="money-wallet-open" transform="translate(-398.000000, -508.000000)" filter="url(#filter-1)">
+            <g transform="translate(398.000000, 508.000000)">
+                <path d="M1.84166667,2.4905 L20.6748333,7.19241667 C23.0381411,7.8871915 24.6947087,10.0123408 24.7916667,12.47375 L24.7916667,29.47375 C24.8543902,30.5229971 24.4008293,31.5367684 23.5767487,32.1892596 C22.7526681,32.8417508 21.6619023,33.0507478 20.655,32.7490833 L4.85066667,29.03175 C2.47908258,28.3786511 0.803382366,26.265114 0.708333333,23.8070833 L0.708333333,5.39041667 C0.715334786,3.0461127 2.61402937,1.14741812 4.95833333,1.14041667 L29.0416667,1.14041667 C31.3862925,1.14664413 33.2854392,3.04579082 33.2916667,5.39041667 L33.2916667,20.97375 C33.2854392,23.3183758 31.3862925,25.2175225 29.0416667,25.22375 L24.7916667,25.22375" id="Path" stroke="#000000"></path>
+                <line x1="13.464" y1="5.39041667" x2="27.6306667" y2="5.39041667" id="Path" stroke="#000000"></line>
+                <circle id="Oval" stroke="#000000" cx="18.4223333" cy="19.5570833" r="2.83333333"></circle>
+                <line x1="24.7973333" y1="12.47375" x2="27.6306667" y2="12.47375" id="Path" stroke="#000000"></line>
+            </g>
+        </g>
+    </g>
+</svg>

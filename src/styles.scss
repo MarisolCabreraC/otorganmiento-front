@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@font-face {
+  font-family: Inter, sans-serif;
+  src: url("/assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("opentype");
+}
+
+body {
+  font-family: Inter, sans-serif !important;
+}
+
+/* Importing Bootstrap SCSS file. */
+
+@import "~bootstrap/scss/bootstrap";
+
+//buttons all app
+.swal2-styled.swal2-cancel {
+  background-color: white !important;
+  color: #00a80c !important;
+  border-color: #00a80c !important;
+  border: 1px solid !important;
+}
+.btn-success {
+  background-color: #00a80c !important;
+}
+.btn-cancel {
+  background-color: white !important;
+  color: #00a80c !important;
+  border-color: #00a80c !important;
+}
+.btn-cancel {
+  // background-color: white!important;
+  // color: #00A80C !important;
+  // border-color: #00A80C !important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+.btn {
+  min-width: 164px !important;
+  font-size: 21px !important;
+  font-weight: 500 !important;
+  border-radius: 4px !important;
+}
+th {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  color: #434343;
+  font-weight: 600;
+}
+td {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  color: #434343;
+  font-weight: 500;
+}
+label {
+  font-weight: 600 !important;
+}
+p {
+  font-size: 21px !important;
+}
+@import "~bootstrap/scss/bootstrap";

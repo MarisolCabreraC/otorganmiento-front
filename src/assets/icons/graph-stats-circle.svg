@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>E259CACD-DE71-468A-B5C0-E64082F248F7</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.000000 0 0 0 0 0.521569 0 0 0 0 0.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="BPOP---HU---Trazabilidad-[Web-1280]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="graph-stats-circle" transform="translate(-398.000000, -572.000000)" filter="url(#filter-1)">
+            <g transform="translate(398.000000, 572.000000)">
+                <circle id="Oval" stroke="#000000" cx="17" cy="17.0014167" r="16.2916667"></circle>
+                <path d="M3.54166667,19.125 L6.90483333,19.125 C10.03,19.125 9.75941667,16.4800833 12.0515833,5.47966667 C12.1199878,5.15116729 12.4094958,4.91573434 12.7450417,4.91573434 C13.0805875,4.91573434 13.3700955,5.15116729 13.4385,5.47966667 L17.7763333,26.6333333 C17.842747,26.9585689 18.1261121,27.1940598 18.458009,27.1999495 C18.7899058,27.2056218 19.0813001,26.980142 19.159,26.6574167 L22.14675,14.2091667 C22.2183061,13.9086075 22.4764158,13.6891006 22.7845655,13.6667427 C23.0927152,13.6443849 23.3798075,13.8243345 23.494,14.1114167 C24.5465833,16.7435833 24.9673333,19.1278333 27.4181667,19.1278333 L30.4583333,19.1278333" id="Path" stroke="#000000"></path>
+            </g>
+        </g>
+    </g>
+</svg>

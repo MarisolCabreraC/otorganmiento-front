@@ -1,0 +1,30 @@
+<h2>Agregar nuevo perfil</h2>
+
+<div>
+    <form [formGroup]="formFilterProfile" autocomplete="off">
+        <div class="row">
+            <label for="nombre">Nombre</label>
+            <small class="text-secondary">Ejemplo: Edwin Alonso Robayo Pereira</small>
+
+            <input type="text" formControlName="nombre" placeholder="Ingresa un nombre">
+            <span class="error" *ngIf="getForm.nombre.hasError('maxlength')">
+                El campo supera el limite máximo de caracteres
+            </span>
+            <span class="error" *ngIf="getForm.nombre.errors?.pattern">
+                El campo solo permite letras (a-z), números (0-9), caracteres (!-+@¡%.,*)
+            </span>
+        </div>
+        <div class="row">
+            <label for="correo">Correo</label>
+            <small class="text-secondary">Ejemplo: edwin_robayo@bancopo.com</small>
+            <input type="text" formControlName="correo" placeholder="Ingresa un correo">
+            <span class="error" *ngIf="getForm.correo.hasError('maxlength')">
+                El campo supera el limite máximo de caracteres
+            </span>
+            <span class="error" *ngIf="getForm.correo.errors?.pattern">
+                El campo solo permite letras (a-z), números (0-9), caracteres (!-+@¡%.,*)
+            </span>
+        </div>
+    </form>
+
+</div>

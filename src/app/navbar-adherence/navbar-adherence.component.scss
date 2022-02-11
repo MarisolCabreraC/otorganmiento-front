@@ -1,0 +1,21 @@
+.item-navigation {
+  background: white;
+  margin-right: 1rem;
+  border: none;
+  color: #6c757d;
+}
+
+.item-navigation-active,
+.item-navigation-active:hover {
+  border-bottom: 4px solid green !important;
+  color: green !important;
+}
+
+.item-navigation:hover {
+  border-bottom: 4px solid lightgray;
+}
+
+.navegation {
+  border-bottom: 1px solid lightgray;
+  padding: 0 0 1rem 1rem;
+}

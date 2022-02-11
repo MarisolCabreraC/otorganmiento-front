@@ -1,0 +1,17 @@
+<h2 class=".adherence-title">Parametrización de adherencia</h2>
+<div class="navegation">
+    <button class="item-navigation" [ngClass]="{'item-navigation-active': idTab=='profile'}"
+        (click)="openTab('profile')">Configuración de
+        perfiles</button>
+    <button class="item-navigation" [ngClass]="{'item-navigation-active': idTab=='adherence'}"
+        (click)="openTab('adherence')">Configuración de criterios</button>
+</div>
+
+<div id="profile" *ngIf="idTab === 'profile'">
+    <app-admin-perfil></app-admin-perfil>
+
+</div>
+
+<div id="adherence" *ngIf="idTab === 'adherence'">
+    <app-admin-adherencia></app-admin-adherencia>
+</div>

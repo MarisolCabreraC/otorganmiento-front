@@ -1,0 +1,70 @@
+<div class="wrapper-adherence-main">
+
+    <span [hidden]="hideForm" class="back-arrow" (click)="back()">
+        <img src="../../../assets/icons/arrow-left.svg" alt="" />
+        Volver a Parametrización de adherencia
+    </span>
+
+    <div [hidden]="!hideForm">
+        <div class="adherence-title">
+            <br>
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="text-secondary">Configuración de perfiles - Resultado de adherencia</p>
+                </div>
+                <div class="col-md-4">
+
+                    <button class="btn addProfile" (click)="addProfile()">
+                        Agregar perfil
+                        <img src="../../../../../../../assets/icons/plus-circle.svg" alt="" />
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <small class="text-secondary">Por favor deslice hacia abajo para ver mas resultados</small>
+                <div class="table-responsive tableFixHead">
+                    <table class="table">
+                        <caption></caption>
+                        <thead>
+                            <tr>
+                                <th class="table--border_none" scope="col">Correo</th>
+                                <th class="table--border_none" scope="col">Nombre</th>
+                                <th class="table--border_none" scope="col">Estado</th>
+                                <th class="table--border_none" scope="col">Editar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let profile of listProfiles">
+                                <th scope="row" style="display: none">
+                                    {{ profile.correosDistribucionId }}
+                                </th>
+                                <td>{{ profile.correo }}</td>
+                                <td>{{ profile.nombre }}</td>
+                                <td>
+                                    <div>
+                                        <input type="checkbox" id="{{ profile.idParametrizacion }}" class="checkbox"
+                                            name="{{ profile.idParametrizacion }}" [checked]="this.status"
+                                            (click)="statusprofile(profile, !this.status)" value={{this.status}} />
+                                        <label for="{{ profile.idParametrizacion }}" class="switch"></label>
+                                    </div>
+                                </td>
+
+
+                                <td class="btn-like">
+                                    <img class="img-fix" src="../../../assets/icons/pencil-2.svg" alt=""
+                                        (click)="editprofile(param)" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div [hidden]="hideForm">
+        <app-add-profile></app-add-profile>
+    </div>
+</div>

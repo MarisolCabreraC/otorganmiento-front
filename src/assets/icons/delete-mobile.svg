@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>406F9466-CB5A-4218-B78E-B3078BEAD8E3</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.000000 0 0 0 0 0.521569 0 0 0 0 0.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="BPOP---HU---Consultar-usuario-[Tablet-768]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="delete-2" transform="translate(-324.000000, -35.000000)" filter="url(#filter-1)">
+            <g transform="translate(325.000000, 36.000000)">
+                <line x1="0" y1="0" x2="25" y2="25" id="Path" stroke="#000000"></line>
+                <line x1="25" y1="0" x2="0" y2="25" id="Path" stroke="#000000"></line>
+            </g>
+        </g>
+    </g>
+</svg>

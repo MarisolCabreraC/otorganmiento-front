@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="24px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>F0A455C8-14CB-4852-AFB0-70CE9162806B</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="BPOP---HU---Consulta-avanzada-[Web-1280]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="BPOP---HU---Consulta-avanzada-[Web-1280]-1.1" transform="translate(-757.000000, -721.000000)">
+            <g id="office-file-pdf" transform="translate(594.000000, 709.000000)" filter="url(#filter-1)">
+                <g transform="translate(163.000000, 12.000000)">
+                    <path d="M18.5,23.5 C19.0522847,23.5 19.5,23.0522847 19.5,22.5 L19.5,6.473 C19.4988957,3.1738797 16.8241205,0.5 13.525,0.5 L1.5,0.5 C0.94771525,0.5 0.5,0.94771525 0.5,1.5 L0.5,22.5 C0.5,23.0522847 0.94771525,23.5 1.5,23.5 L18.5,23.5 Z" id="Path" stroke="#000000"></path>
+                    <path d="M14.5,0.579 L14.5,4.5 C14.5,5.05228475 14.9477153,5.5 15.5,5.5 L19.42,5.5" id="Path" stroke="#000000"></path>
+                    <path d="M6.479,15 C6.479,15.8284271 5.80742712,16.5 4.979,16.5 L3.479,16.5 L3.479,13.5 L4.979,13.5 C5.80742712,13.5 6.479,14.1715729 6.479,15 Z" id="Path" stroke="#000000"></path>
+                    <line x1="3.479" y1="19.499" x2="3.479" y2="16.499" id="Path" stroke="#000000"></line>
+                    <path d="M8.479,13.5 C10.1358542,13.5 11.479,14.8431458 11.479,16.5 C11.479,18.1568542 10.1358542,19.5 8.479,19.5 L8.479,13.5 Z" id="Path" stroke="#000000"></path>
+                    <path d="M13.479,19.5 L13.479,14.5 C13.479,13.9477153 13.9267153,13.5 14.479,13.5 L16.479,13.5" id="Path" stroke="#000000"></path>
+                    <line x1="13.479" y1="16.499" x2="15.479" y2="16.499" id="Path" stroke="#000000"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

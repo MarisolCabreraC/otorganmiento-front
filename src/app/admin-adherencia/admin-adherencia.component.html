@@ -1,0 +1,70 @@
+<div class="wrapper-adherence-main">
+    <p class="text-secondary">Puedes filtrar la tabla de configuración de criterios buscando por código,
+        nombre del
+        criterio, tipo de
+        producto, de flujo o de decisión</p>
+    <div class="input-group">
+        <input name="filter" class="form-control" placeholder="Buscar">
+    </div>
+    <div class="adherence-title">
+        <br>
+        <div class="row">
+            <div class="col-md-8">
+                <p class="text-secondary">Configuración de criterios - Adherencia de políticas</p>
+            </div>
+            <div class="col-md-4">
+                <button class="btn addAdherence" (click)="addAdherence()">
+                    Agregar criterio
+                    <img src="../../../../../../assets/icons/plus-circle.svg" alt="" />
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <small class="text-secondary">Por favor deslice hacia abajo para ver mas resultados</small>
+            <div class="table-responsive tableFixHead">
+                <table class="table">
+                    <caption></caption>
+                    <thead>
+                        <tr>
+                            <th class="table--border_none" scope="col">Código</th>
+                            <th class="table--border_none" scope="col">Nombre del criterio</th>
+                            <th class="table--border_none" scope="col">Tipo de producto</th>
+                            <th class="table--border_none" scope="col">Tipo de flujo</th>
+                            <th class="table--border_none" scope="col">Tipo de decisión</th>
+                            <th class="table--border_none" scope="col">Estado</th>
+                            <th class="table--border_none" scope="col">Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let adherence of listAdherence">
+                            <th scope="row" class="font--weight_fix">
+                                {{ adherence.idParametrizacion }}
+                            </th>
+                            <td>{{ adherence.nombre }}</td>
+                            <td>{{ adherence.nombreTipoProducto }}</td>
+                            <td>{{ adherence.nombreTipoFlujo }}</td>
+                            <td>{{ adherence.tipoDecision }}</td>
+                            <td>
+                                <div>
+                                    <input type="checkbox" id="{{ adherence.idParametrizacion }}" class="checkbox"
+                                        name="{{ adherence.idParametrizacion }}" [checked]="this.status"
+                                        (click)="statusAdherence(adherence, !this.status)" value={{this.status}} />
+                                    <label for="{{ adherence.idParametrizacion }}" class="switch"></label>
+                                </div>
+                            </td>
+
+
+                            <td class="btn-like">
+                                <img class="img-fix" src="../../../assets/icons/pencil-2.svg" alt=""
+                                    (click)="editAdherence(param)" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
