@@ -1,0 +1,21 @@
+.form-control {
+  width: 80%;
+}
+
+.formGroup {
+  margin: 2rem 2rem 0 0;
+}
+
+.btn {
+  margin: 2rem 2rem 0 0;
+}
+
+button.btn.btn-secondary {
+  background-color: white !important;
+  border: 1px solid green !important;
+  color: green;
+}
+
+button.btn.btn-secondary:hover {
+  box-shadow: 0 1px 11px green !important;
+}

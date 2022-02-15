@@ -1,10 +1,4 @@
 <div class="wrapper-adherence-main">
-
-    <span [hidden]="hideForm" class="back-arrow" (click)="back()">
-        <img src="../../../assets/icons/arrow-left.svg" alt="" />
-        Volver a Parametrización de adherencia
-    </span>
-
     <div [hidden]="!hideForm">
         <div class="adherence-title">
             <br>
@@ -23,7 +17,6 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <small class="text-secondary">Por favor deslice hacia abajo para ver mas resultados</small>
                 <div class="table-responsive tableFixHead">
                     <table class="table">
                         <caption></caption>
@@ -44,17 +37,17 @@
                                 <td>{{ profile.nombre }}</td>
                                 <td>
                                     <div>
-                                        <input type="checkbox" id="{{ profile.idParametrizacion }}" class="checkbox"
-                                            name="{{ profile.idParametrizacion }}" [checked]="this.status"
-                                            (click)="statusprofile(profile, !this.status)" value={{this.status}} />
-                                        <label for="{{ profile.idParametrizacion }}" class="switch"></label>
+                                        <input type="checkbox" id="{{ profile.correosDistribucionId }}" class="checkbox"
+                                            name="{{ profile.correosDistribucionId }}" [checked]="profile.activo"
+                                            (click)="updateStatusProfile(profile)" value={{this.status}} />
+                                        <label for="{{ profile.correosDistribucionId }}" class="switch"></label>
                                     </div>
                                 </td>
 
 
                                 <td class="btn-like">
                                     <img class="img-fix" src="../../../assets/icons/pencil-2.svg" alt=""
-                                        (click)="editprofile(param)" />
+                                        (click)="editProfile(profile)" />
                                 </td>
                             </tr>
                         </tbody>
@@ -65,6 +58,7 @@
     </div>
 
     <div [hidden]="hideForm">
-        <app-add-profile></app-add-profile>
+        <app-add-profile (volverTabla)="visualizarTabla($event)" id="AddProfileComponent" name="AddProfileComponent"
+            #AddProfileComponent></app-add-profile>
     </div>
 </div>

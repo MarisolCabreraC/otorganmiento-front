@@ -1,0 +1,152 @@
+<span class="back-arrow" (click)="backForm()">
+    <img src="../../../assets/icons/arrow-left.svg" alt="" />
+    Volver a Parametrización de adherencia
+</span>
+
+<h2 class="formGroup">Agregar nuevo criterio</h2>
+
+<div>
+    <form [formGroup]="formAdherence" autocomplete="off">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="nombre">Código</label>
+                <br>
+                <small class="text-secondary">Campo automático</small>
+                <input type="text" class="form-control" id="codigo" formControlName="codigo" disabled />
+            </div>
+            <div class="col-md-9">
+                <div [ngClass]="{ 'form-group': true, 'error-code': errorCode == true }">
+                    <label for="nombreCriterio">Nombre del criterio</label>
+                    <br>
+                    <small class="text-secondary">Ejemplo: Adherencia por oficina</small>
+                    <input type="text" class="form-control" style="width: 73%;" id="nombreCriterio"
+                        placeholder="Ingresa el nombre criterio" formControlName="nombreCriterio" required />
+                </div>
+            </div>
+
+            <div class="formGroup" [ngClass]="{ 'form-group': true, 'error-code': errorCode == true }">
+                <label for="nombreCriterio">Tipo de producto</label>
+                <br>
+                <div class="input-group mb-3">
+                    <select class="custom-select" formControlName="tipoProducto">
+                        <option selected disabled>Seleccionar</option>
+                        <option value="{{ profile.idPerfil }}" *ngFor="let profile of listProfiles">{{ profile.nombre }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="formGroup" [ngClass]="{ 'form-group': true, 'error-code': errorCode == true }">
+                <label for="nombreCriterio">Tipo de flujo</label>
+                <br>
+                <div class="input-group mb-3">
+                    <select class="custom-select" formControlName="tipoFlujo">
+                        <option selected disabled>Seleccionar</option>
+                        <option value="{{ profile.idPerfil }}" *ngFor="let profile of listProfiles">{{ profile.nombre }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="formGroup" [ngClass]="{ 'form-group': true, 'error-code': errorCode == true }">
+                <label for="nombreCriterio">Tipo de decisión</label>
+                <br>
+                <div class="input-group mb-3">
+                    <select class="custom-select" formControlName="tipoDecision">
+                        <option selected disabled>Seleccionar</option>
+                        <option value="{{ profile.idPerfil }}" *ngFor="let profile of listProfiles">{{ profile.nombre }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" formArrayName="criteria"
+            *ngFor="let unit of formAdherence.controls.criteria.controls; let ind=index">
+            <div class="card-body" [formGroupName]="ind">
+                <div class="row " [ngClass]="{ 'form-group': true, 'error-code': errorCode == true }">
+                    <div class="col-md-9">
+                        <label for="nombreCriterio">Variable de criterio</label>
+                    </div>
+                    <div class="col-md-3 delete">
+                        <span class="close-btn" *ngIf="formAdherence.controls.criteria.controls.length > 1"
+                            (click)="removeCriteria(i)">
+                            <img class="close-btn" src="../../../assets/icons/close.png" alt="" />
+                            Quitar variable
+                        </span>
+                    </div>
+
+                    <br>
+                    <div class="selectVariable">
+                        <select class="custom-select selectCard"
+                            (change)="changeValueRuleCriteria($event.target.value, ind)"
+                            formControlName="variableCriterio">
+                            <option selected disabled>Seleccionar</option>
+                            <option *ngFor="let rules of listRules" value={{rules.id}}>{{
+                                rules.nombreCriterio }}
+                            </option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="row" *ngIf="formAdherence.get('criteria').value[ind].variableEntro">
+                    <div class=" col-md-6">
+                        <select class="custom-select selectCard selectCardMultiple"
+                            (change)="changeVariable($event.target.value, ind)">
+                            <option selected disabled>Seleccionar</option>
+                            <option *ngFor="let condicion of condicionCriteria">{{
+                                condicion }}
+                            </option>
+                        </select>
+                    </div>
+
+                    <!-- Formulario de "entre" -->
+                    <div class="col-md-6"
+                        *ngIf="formAdherence.get('criteria').value[ind].variableEntro && formAdherence.get('criteria').value[ind].formMultiple">
+                        <div class=" row rowEntre">
+                            <div class="col-md-5 withoutPadding">
+                                <input type="number" class="form-control variableEntre" id="codigo"
+                                    placeholder="Ingresa un valor" formControlName="valor1" />
+                            </div>
+                            <div class="col-md-1 text-center">
+                                y
+                            </div>
+                            <div class="col-md-5 withoutPadding">
+                                <input type="number" class="form-control variableEntre" id="codigo"
+                                    placeholder="Ingresa un valor" formControlName="valor2" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario unico valor -->
+                    <div class="col-md-6"
+                        *ngIf="formAdherence.get('criteria').value[ind].variableEntro && !formAdherence.get('criteria').value[ind].formMultiple">
+                        <input type="text" class="form-control" style="width: 73%;" id="nombreCriterio"
+                            placeholder="Ingresa el valor" required />
+                    </div>
+
+                    <div class="row" *ngIf="createFormSingle">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="back-arrow" (click)="addCriteria()">
+            <img class="circle-add" src="../../../assets/icons/circle-add.png" alt="" />
+            Agregrar otra variable
+        </span>
+
+        <div class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-secondary" (click)=backForm()>Cancelar</button>
+                <button *ngIf="isCreate" type="button" class="btn btn-success" (click)="save()" id="openModal">Guardar
+                </button>
+                <button *ngIf="!isCreate" type="button" class="btn btn-success" (click)="update()"
+                    id="openModal">Actualizar
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

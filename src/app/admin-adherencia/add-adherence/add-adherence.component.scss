@@ -1,0 +1,107 @@
+/* Inicio ocultar flechas input tipo number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* Fin ocultar flechas input tipo number */
+
+span {
+  cursor: pointer;
+}
+
+.form-control {
+  width: 80%;
+}
+
+.formGroup {
+  margin: 2rem 2rem 0 0;
+}
+
+.btn {
+  margin: 2rem 2rem 0 0;
+}
+
+button.btn.btn-secondary {
+  background-color: white !important;
+  border: 1px solid green !important;
+  color: green;
+}
+
+button.btn.btn-secondary:hover {
+  box-shadow: 0 1px 11px green !important;
+}
+
+.custom-select {
+  color: #787477;
+  display: block;
+  line-height: 1.3;
+  border: 1px solid #ced4da;
+  padding: 0.4em 1.4em 0.3em 0.8em;
+  width: 80%;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  border-radius: 0.3em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("../../../assets/icons/down-arrow.png") no-repeat right;
+  background-repeat: no-repeat, repeat;
+  background-position: right 1% top 50%, 0 0;
+  background-size: 1.3em auto, 100%;
+}
+
+.card {
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 15px -2px rgb(0 0 0 / 24%);
+  width: 80%;
+  padding-bottom: 12px;
+}
+
+.selectCard {
+  width: 100%;
+}
+
+.selectCardMultiple {
+  margin: 0 0 1rem 1rem;
+}
+
+.rowEntre {
+  align-items: center;
+  justify-content: center;
+}
+
+.variableEntre {
+  width: 100% !important;
+}
+
+.withoutPadding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.col-md-3 {
+  flex: 0 0 auto;
+  width: 25% !important;
+}
+.col-md-3.delete {
+  text-align: right;
+}
+
+.circle-add {
+  height: 20px;
+  width: 20px;
+}
+
+.close-btn {
+  height: 20px;
+  width: 20px;
+}

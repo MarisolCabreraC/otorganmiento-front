@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditAdherenciaComponent } from './edit-adherencia.component';
+import { AddAdherenceComponent } from './add-adherence.component';
 
-describe('EditAdherenciaComponent', () => {
-  let component: EditAdherenciaComponent;
-  let fixture: ComponentFixture<EditAdherenciaComponent>;
+describe('AddAdherenceComponent', () => {
+  let component: AddAdherenceComponent;
+  let fixture: ComponentFixture<AddAdherenceComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditAdherenciaComponent ]
+      declarations: [ AddAdherenceComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditAdherenciaComponent);
+    fixture = TestBed.createComponent(AddAdherenceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

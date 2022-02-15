@@ -1,30 +1,48 @@
-<h2>Agregar nuevo perfil</h2>
+<span class="back-arrow" (click)="backForm()">
+    <img src="../../../assets/icons/arrow-left.svg" alt="" />
+    Volver a Parametrización de adherencia
+</span>
+
+<h2 class="formGroup">Agregar nuevo perfil</h2>
 
 <div>
-    <form [formGroup]="formFilterProfile" autocomplete="off">
-        <div class="row">
+    <form [formGroup]="formPerfiles" autocomplete="off">
+        <div class="formGroup" [ngClass]="{ 'form-group': true, 'error-code': errorCode == true }">
             <label for="nombre">Nombre</label>
+            <br>
             <small class="text-secondary">Ejemplo: Edwin Alonso Robayo Pereira</small>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresa el Nombre" formControlName="nombre"
+                required />
+            <p class="text-error-code" ion-text *ngIf="formPerfiles.get('nombre').hasError('maxlength')">
+                Máximo 50 caracteres
+            </p>
+        </div>
 
-            <input type="text" formControlName="nombre" placeholder="Ingresa un nombre">
-            <span class="error" *ngIf="getForm.nombre.hasError('maxlength')">
-                El campo supera el limite máximo de caracteres
-            </span>
-            <span class="error" *ngIf="getForm.nombre.errors?.pattern">
-                El campo solo permite letras (a-z), números (0-9), caracteres (!-+@¡%.,*)
-            </span>
+
+        <div class="formGroup" [ngClass]="{ 'form-group': true, 'error-code': errorCode == true }">
+            <label for="correo">Correo</label>
+            <br>
+            <small class="text-secondary">Ejemplo: edwinpereira@bancopo.com</small>
+            <input type="text" class="form-control" id="correo" placeholder="Ingresa el Correo" formControlName="correo"
+                required />
+            <p class="text-error-code" ion-text *ngIf="formPerfiles.get('correo').hasError('maxlength')">
+                Máximo 50 caracteres
+            </p>
+            <p class="text-error-code" ion-text *ngIf="formPerfiles.get('correo').hasError('pattern')">
+                El correo ingresado no es válido
+            </p>
+
         </div>
         <div class="row">
-            <label for="correo">Correo</label>
-            <small class="text-secondary">Ejemplo: edwin_robayo@bancopo.com</small>
-            <input type="text" formControlName="correo" placeholder="Ingresa un correo">
-            <span class="error" *ngIf="getForm.correo.hasError('maxlength')">
-                El campo supera el limite máximo de caracteres
-            </span>
-            <span class="error" *ngIf="getForm.correo.errors?.pattern">
-                El campo solo permite letras (a-z), números (0-9), caracteres (!-+@¡%.,*)
-            </span>
+            <div class="col-12">
+                <button type="button" class="btn btn-secondary" (click)=backForm()>Cancelar</button>
+                <button *ngIf="isCreate" type="button" class="btn btn-success" (click)="save()" id="openModal"
+                    [disabled]="formPerfiles.invalid">Guardar
+                </button>
+                <button *ngIf="!isCreate" type="button" class="btn btn-success" (click)="update()" id="openModal"
+                    [disabled]="formPerfiles.invalid">Actualizar
+                </button>
+            </div>
         </div>
     </form>
-
 </div>
