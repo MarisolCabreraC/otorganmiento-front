@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-md-3 delete">
                         <span class="close-btn" *ngIf="formAdherence.controls.criteria.controls.length > 1"
-                            (click)="removeCriteria(i)">
+                            (click)="removeCriteria(ind)">
                             <img class="close-btn" src="../../../assets/icons/close.png" alt="" />
                             Quitar variable
                         </span>
@@ -91,10 +91,10 @@
                     </div>
                 </div>
 
-                <div class="row" *ngIf="formAdherence.get('criteria').value[ind].variableEntro">
-                    <div class=" col-md-6">
+                <div class="row inputCard" [hidden]="formAdherence.get('criteria').value[ind].variableEntro == false">
+                    <div class=" col-md-6 alignInputs">
                         <select class="custom-select selectCard selectCardMultiple"
-                            (change)="changeVariable($event.target.value, ind)">
+                            (change)="changeVariable($event.target.value, ind)" formControlName="idOperador">
                             <option selected disabled>Seleccionar</option>
                             <option *ngFor="let condicion of condicionCriteria">{{
                                 condicion }}
@@ -103,28 +103,26 @@
                     </div>
 
                     <!-- Formulario de "entre" -->
-                    <div class="col-md-6"
-                        *ngIf="formAdherence.get('criteria').value[ind].variableEntro && formAdherence.get('criteria').value[ind].formMultiple">
+                    <div class="col-md-6 alignInputs"
+                        [hidden]="formAdherence.get('criteria').value[ind].formMultiple == false ">
                         <div class=" row rowEntre">
-                            <div class="col-md-5 withoutPadding">
+                            <div class="col-md-5">
                                 <input type="number" class="form-control variableEntre" id="codigo"
-                                    placeholder="Ingresa un valor" formControlName="valor1" />
+                                    placeholder="Ingresa un valor" formControlName="valorPrimero" />
                             </div>
-                            <div class="col-md-1 text-center">
+                            <div class="col-md-2 text-center">
                                 y
                             </div>
-                            <div class="col-md-5 withoutPadding">
+                            <div class="col-md-5">
                                 <input type="number" class="form-control variableEntre" id="codigo"
-                                    placeholder="Ingresa un valor" formControlName="valor2" />
+                                    placeholder="Ingresa un valor" formControlName="valorSegundo" />
                             </div>
                         </div>
                     </div>
 
                     <!-- Formulario unico valor -->
-                    <div class="col-md-6"
-                        *ngIf="formAdherence.get('criteria').value[ind].variableEntro && !formAdherence.get('criteria').value[ind].formMultiple">
-                        <input type="text" class="form-control" style="width: 73%;" id="nombreCriterio"
-                            placeholder="Ingresa el valor" required />
+                    <div class="col-md-6" *ngIf="formAdherence.get('criteria').value[ind].formMultiple == false">
+                        <input type="text" class="form-control" placeholder="Ingresa el valor" required />
                     </div>
 
                     <div class="row" *ngIf="createFormSingle">
@@ -138,8 +136,8 @@
             Agregrar otra variable
         </span>
 
-        <div class="row">
-            <div class="col-12">
+        <div class="row btn-operations">
+            <div class="col-12 btn-operations">
                 <button type="button" class="btn btn-secondary" (click)=backForm()>Cancelar</button>
                 <button *ngIf="isCreate" type="button" class="btn btn-success" (click)="save()" id="openModal">Guardar
                 </button>

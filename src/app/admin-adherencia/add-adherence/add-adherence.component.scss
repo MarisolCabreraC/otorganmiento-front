@@ -17,7 +17,7 @@ span {
 }
 
 .form-control {
-  width: 80%;
+  width: 100%;
 }
 
 .formGroup {
@@ -70,22 +70,16 @@ button.btn.btn-secondary:hover {
   width: 100%;
 }
 
-.selectCardMultiple {
-  margin: 0 0 1rem 1rem;
+.inputCard {
+  margin: 1rem 0 1rem 0rem;
 }
 
 .rowEntre {
   align-items: center;
-  justify-content: center;
 }
 
 .variableEntre {
   width: 100% !important;
-}
-
-.withoutPadding {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
 }
 
 .col-md-3 {
@@ -102,6 +96,14 @@ button.btn.btn-secondary:hover {
 }
 
 .close-btn {
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
+}
+
+.btn-operations {
+  margin: 0 0 1rem 0;
+}
+
+.alignInputs {
+  padding-left: 0px;
 }

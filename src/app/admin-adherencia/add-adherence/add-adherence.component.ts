@@ -86,12 +86,11 @@ export class AddAdherenceComponent implements OnInit {
         Validators.required,
         Validators.maxLength(50),
       ]),
-      variableEntro: [false],
-      formMultiple: [false],
-      idCriterio: [""],
-      idOperador: [""],
-      valor1: [""],
-      valor2: [""],
+      variableEntro: new FormControl(null, [Validators.required]),
+      formMultiple: new FormControl(null, [Validators.required]),
+      idOperador: new FormControl(""),
+      valorPrimero: new FormControl(""),
+      valorSegundo: new FormControl(""),
     });
   }
 
@@ -109,14 +108,14 @@ export class AddAdherenceComponent implements OnInit {
   }
 
   changeValueRuleCriteria(obj: any, ind: any) {
+    this.formAdherence.get("criteria").value[ind].variableEntro = true;
     this.mainService.findAllRulesCriteria().subscribe((result) => {
       this.listRuleCriteria = result.criterios.filter(
         (item: any) => item.id == obj
       );
-      this.formAdherence.get("criteria").value[ind].variableEntro = true;
-      this.cdRef.detectChanges();
       this.condicionCriteria = this.listRuleCriteria[0].reglas;
     });
+    this.cdRef.detectChanges();
   }
 
   changeVariable(id: any, ind: any) {
@@ -125,6 +124,7 @@ export class AddAdherenceComponent implements OnInit {
     } else {
       this.formAdherence.get("criteria").value[ind].formMultiple = false;
     }
+    this.cdRef.detectChanges();
   }
 
   /**
@@ -166,11 +166,6 @@ export class AddAdherenceComponent implements OnInit {
         valor1: null,
         valor2: null,
       };
-
-      console.log(
-        "aaaaaaaaaaaaaa",
-        this.formAdherence.get("criteria").value.valor1
-      );
       regla.idCriterio =
         this.formAdherence.get("criteria").value[index].variableCriterio;
       regla.idOperador =

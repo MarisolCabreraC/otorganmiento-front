@@ -51,8 +51,8 @@
                                 <td>
                                     <div>
                                         <input type="checkbox" id="{{ adherence.idParametrizacion }}" class="checkbox"
-                                            name="{{ adherence.idParametrizacion }}" [checked]="this.status"
-                                            (click)="statusAdherence(adherence, !this.status)" value={{this.status}} />
+                                            name="{{ adherence.idParametrizacion }}" [checked]="adherence.estado"
+                                            (click)="statusAdherence(adherence)" value={{this.status}} />
                                         <label for="{{ adherence.idParametrizacion }}" class="switch"></label>
                                     </div>
                                 </td>

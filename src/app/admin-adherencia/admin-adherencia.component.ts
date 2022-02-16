@@ -57,12 +57,11 @@ export class AdminAdherenciaComponent implements OnInit {
     }
   }
 
-  statusAdherence(criteria: any, status: boolean) {
-    let statusObj;
-    if (status == true) {
-      statusObj = 1;
-    } else {
-      statusObj = 0;
+  statusAdherence(criteria: any) {
+    if (criteria.activo == "0" || criteria.activo == null) {
+      criteria.activo = 1;
+    } else if (criteria.activo == "1") {
+      criteria.activo = 0;
     }
 
     let objToSend = {
@@ -71,7 +70,7 @@ export class AdminAdherenciaComponent implements OnInit {
       idTipoProducto: criteria.idTipoProducto,
       idTipoFlujo: criteria.idTipoFlujo,
       idTipoDecision: criteria.idTipoDecision,
-      estado: statusObj,
+      estado: criteria.activo,
     };
 
     this.mainService.updateStatusAdherence(objToSend).subscribe(
