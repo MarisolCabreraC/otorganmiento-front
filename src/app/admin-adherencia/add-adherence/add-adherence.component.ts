@@ -185,6 +185,11 @@ export class AddAdherenceComponent implements OnInit {
       reglas: [reglas],
     };
 
+    this.mainService.saveProfile(objSave).subscribe((result) => {
+      window.alert("Registro éxitoso");
+      this.formAdherence.reset();
+      this.volverTabla.next();
+    });
     console.log(objSave);
   }
 }
